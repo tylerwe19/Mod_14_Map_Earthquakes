@@ -2,7 +2,22 @@
 console.log("working");
 
 // Create the map object with a center and zoom level.
-let map = L.map('map').setView([40.7, -94.5], 4);
+//let map = L.map('map').setView([40.7, -94.5], 4);
+
+//Creating a map that plots a single line and multiple lines:
+//We create map object with options 
+let map = L.map('map').setView([36.1733,-120.1794],5);
+//coordinates for each point to used in polyline
+let line = [
+    [33.9416,-118.4085],
+    [37.6213,-122.3790],
+    [40.7899,-111.9791],
+    [47.4502,-122.3088]
+];
+//Create a polyline using the line coordinates and make the line red
+L.polyline(line,{
+    color:"yellow"
+}).addTo(map);
 
 //Alternative method
 // let map2 = L.map("map", {
